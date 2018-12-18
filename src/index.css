@@ -1,0 +1,14 @@
+html,body,p,div,
+ul,li{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+body,html{
+  min-width: 1200px;
+}

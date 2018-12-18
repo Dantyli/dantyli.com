@@ -1,0 +1,19 @@
+.footer{
+    height: 70px;
+    line-height: 70px;
+    background: rgb(28,33,67);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-style:italic;
+    color: #fff;
+    .icon{
+        cursor: pointer;
+        height: 25px;
+        margin-left:10px;
+        vertical-align: middle;
+    }
+}

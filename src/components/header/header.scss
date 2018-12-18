@@ -1,0 +1,41 @@
+.header{
+    height: 80px;
+    background: rgb(28,33,67);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    &-wrap{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .fr{
+        float: right;
+    }
+    &-items{
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+        display: inline-block;
+        line-height: 80px;
+        .avatar{
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 10px;
+            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                transform: scale(1.5);
+            }
+        }
+        a{
+            margin: 0 10px;
+            color: #fff;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        
+    }
+}

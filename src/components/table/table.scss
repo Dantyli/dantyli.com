@@ -1,0 +1,63 @@
+.table{
+    margin-top: 100px;
+    table{
+        background: #484f6e;
+        border: 1px solid #ddd;
+        margin: 0 auto;
+        border-spacing: 0;
+        color: #fff;
+        th{
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 3px;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        td{
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 3px;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        tr{
+            &:hover{
+                background: #1c2143;
+            }
+        }
+    }
+    .pager{
+       
+        border: 1px solid #ddd;
+        margin: 20px auto 80px;
+        color: #fff;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        p{
+            &:hover{
+                background: #1c2143;
+            }
+            display: inline-block;
+            background: #484f6e;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 20px;
+            margin-left: 5px;
+        }
+        .active{
+            background: #fff;
+            color: #333;
+            &:hover{
+                background: #fff;
+                color: #333;
+            }
+        }
+    }
+}

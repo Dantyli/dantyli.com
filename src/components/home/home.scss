@@ -1,0 +1,28 @@
+.home{
+    margin-top: 80px;
+    width: 100%;
+    background:rgb(72,79,110);
+    background-size:contain;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    p{
+        margin:80px 20px;
+        height: 200px;
+        width: 200px;
+        border: 1px solid #fff;
+        opacity: 0.7;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        box-sizing: border-box;
+        padding: 10px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    }
+}
