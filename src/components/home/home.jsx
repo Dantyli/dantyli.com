@@ -21,7 +21,7 @@ class Home extends Component{
                     <h2>Cooperation</h2>
                     <a href="mailto:dantyli93@gmail.com">dantyli93@gmail.com</a>
                     <h5>China</h5>
-                    <a href="leece2012@163.com">leece2012@163.com</a>
+                    <a href="mailto:leece2012@163.com">leece2012@163.com</a>
                 </p>
             </div>
         )

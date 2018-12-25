@@ -17,7 +17,8 @@ class CommonHeader extends Component{
                          <Link to="/">Hi,i am Dantyli!</Link>
                      </p>
                      <p className="header-items fr">
-                        <Link to="/table">More</Link>
+                        <Link to="/live">Live</Link>
+                        <Link to="/table">24H</Link>
                      </p>
                 </div>
             </div>

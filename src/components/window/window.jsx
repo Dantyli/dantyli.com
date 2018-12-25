@@ -11,6 +11,7 @@ class Win extends Component{
              topList:[]
         }
         this.handleScale=this.handleScale.bind(this);
+        this.handleReload=this.handleReload.bind(this);
     }
     handleScale(e){
         this.setState({
@@ -39,9 +40,41 @@ class Win extends Component{
                 y=moveY;
             }
         })
+        //移动端touch事件
+        dragobj.addEventListener('touchstart',function(e){
+            startX=e.targetTouches[0].pageX;
+            startY=e.targetTouches[0].pageY;
+         })
+         dragobj.addEventListener('touchmove',function(e){
+             e.preventDefault();//阻止有回弹效果的浏览器出问题
+              moveX=e.targetTouches[0].pageX-startX+x;
+              moveY=e.targetTouches[0].pageY-startY+y;
+              that.setState({
+                  moveX:moveX,
+                  moveY:moveY
+              })
+         }) 
+         dragobj.addEventListener('touchend',function(){
+             x=moveX;
+             y=moveY;
+         })
             
        setTimeout(()=>{
-            topList=[];
+            let topList=[];
+            for(let i=0;i<4;i++){
+                topList.push(that.props.list[i])
+            }
+            that.setState({
+                topList:topList
+            })
+       },3000)
+    }
+    handleReload(){
+        let topList=[],that=this;
+        that.setState({
+            topList:topList
+        })
+        setTimeout(()=>{
             for(let i=0;i<4;i++){
                 topList.push(that.props.list[i])
             }
@@ -55,7 +88,7 @@ class Win extends Component{
         let {moveX,moveY,scale,topList}=this.state;
         return(
             <div className="win" style={{transform:`translate(${moveX}px,${moveY}px)scale(${scale})`}}>
-                <p className="toolbar"><span title="关闭" onClick={this.props.close}></span><span title="缩小" onClick={()=>this.handleScale(0.3)}></span><span title="放大" onClick={()=>this.handleScale(1.5)}></span><i>Draggable</i></p>
+                <p className="toolbar"><span title="关闭" onClick={this.props.close}></span><span title="缩小" onClick={()=>this.handleScale(0.3)}></span><span title="放大" onClick={()=>this.handleScale(1.5)}></span><i onClick={this.handleReload}>Reload</i></p>
                 <ul>
                     {topList.length>0?
                         topList.map(v=>{

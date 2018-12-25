@@ -11,6 +11,13 @@ router.get('/getCoinList',async (ctx)=>{
         data:res.data
     }
 })
+//设置请求接口
+router.get('/getConfig',async (ctx)=>{
+    ctx.body={
+        code:'200',
+        url:'http://www.dantyli.com'
+    }
+})
 app.use(router.routes())
 app.listen(3001,()=>{
     console.log('server start on port 3001')

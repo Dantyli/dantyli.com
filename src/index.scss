@@ -1,0 +1,45 @@
+html,body,p,div,
+ul,li{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+body,html{
+  min-width: 1200px;
+  width: 100%;
+}
+table{
+  background: #484f6e;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-spacing: 0;
+  color: #fff;
+  th{
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      padding: 3px;
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+  }
+  td{
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      padding: 3px;
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+  }
+  tr{
+      &:hover{
+          background: #1c2143;
+      }
+  }
+}

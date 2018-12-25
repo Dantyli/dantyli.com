@@ -4,6 +4,7 @@ import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import Win from './components/window/window'
 import Home from './components/home/home'
+import Live from './components/live/live'
 // import About from './components/about/about'
 import Currency from './components/table/table'
 import {Route,Switch,HashRouter,withRouter} from 'react-router-dom';
@@ -45,6 +46,7 @@ class App extends Component{
            <Switch>
              <Route path="/" exact component={Home} />
              <Route path="/table" exact component={Currency} />
+             <Route path="/live" exact component={Live} />
            </Switch>
            {model&&<Win close={this.handleCloseModel} />}
            <Footer />
