@@ -22,12 +22,12 @@ class App extends Component{
     }
     componentWillMount(){
       let that=this
-      ajax({url:'/api/getCoinList'}).then(res=>{
+      ajax({url:'/getCoinList'}).then(res=>{
          let result=JSON.parse(res)
            that.props.fetchlist(result.data)
       })
       setInterval(()=>{
-        ajax({url:'/api/getCoinList'}).then(res=>{
+        ajax({url:'/getCoinList'}).then(res=>{
           let result=JSON.parse(res)
             that.props.fetchlist(result.data)
        })
